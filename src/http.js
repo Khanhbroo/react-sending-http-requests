@@ -1,4 +1,4 @@
-const fetchAvailablePlaces = async () => {
+export const fetchAvailablePlaces = async () => {
   const response = await fetch("http://localhost:3000/places");
   const resData = await response.json();
   // 400, 500
@@ -24,5 +24,3 @@ export const updateUserPlaces = async (places) => {
   }
   return resData.message;
 };
-
-export default fetchAvailablePlaces;
